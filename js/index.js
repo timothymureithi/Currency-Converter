@@ -56,11 +56,12 @@ backbtn.onclick = function() {
  function calculate(){
     const currency_1 = currency1.value;
     const currency_2 = currency2.value; 
-
+   //Extract rates for the currency therefore I will add ${cuurency_1}, which will allow to fetch currency depending on whichever value I select
     fetch(`https://v6.exchangerate-api.com/v6/c50c0dd18c871c23de59c4e4/latest/${currency_1}`)
     .then(response => response.json())
     .then((data) => {
         //  console.log(data);
+      //Conversion rate is triggered when the user clicks the swap button
         const rate = data.conversion_rates[currency_2];
         Convrate.innerText = `1 ${currency_1} = ${rate} ${currency_2}`;
         amount2.value = (amount1.value * rate).toFixed(2);
