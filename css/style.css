@@ -20,7 +20,7 @@
 
 .logo{
     display: block;
-    width: 100px;
+    width: 75px;
     margin-top: 30px;
     margin-left: 100px;
 }
@@ -33,12 +33,11 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: rgb(243, 238, 238);
     border-radius: 15px;
 }
 
-.content h3{
-    color: #ff2e00;
+.content h1{
+    color: #0043ee;
     font-size: 37px;
     line-height: 30px;
     margin: 25px 0;
@@ -50,19 +49,8 @@
     font-size: 17px;
     line-height: 28px;
     margin-bottom: 50px;
+    margin-left: 20px;
 }
-
-button{
-    width: 200px;
-    border: none;
-    background: #0043ee;
-    color: #fff;
-    box-shadow: 0px 10px 10px 1px rgba(219, 219, 219, 0);
-    padding: 25px 0;
-    outline: none;
-    font-size: 12px;
-    cursor: pointer;
-    }
 
 .slider{
     width: 100%;
@@ -134,13 +122,7 @@ hr{
         flex-basis: 100%;
     }
     .content{
-        width: 75%;
-        padding-top: 80px;
-        padding-bottom: 30px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        padding: 4rem 2rem;
     
     }
     .content h1{
@@ -166,28 +148,16 @@ hr{
 .swapBtn{
     color: #fff;
     cursor: pointer;
-    font-size: 14px;
-    background-color: #0043ee;
-    border-radius: 50px;
-    margin-left: 3em;
-    padding: 10px 40px;
+    font-size: 20px;
+    border-radius: 10px;
+    margin-left: 20px;
+    padding: 14px 40px;
+    width: 200px;
+    border: none;
+    background: #0043ee;
+    outline: none;
 }
 
-/*
-
-position: absolute;
-    width: 260px;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 10px 40px;
-    margin-top: 28px;
-    border-radius: 50px;
-    background-color: rgb(0, 162, 255);
-    color: white;
-    font-weight: 300;
-
-
-*/
 
 .currency{
     display: flex;
@@ -196,6 +166,7 @@ position: absolute;
     justify-content: space-between;
     width: 10rem;
     padding: 6px;
+    position: relative;
 }
 
 
@@ -207,14 +178,23 @@ position: absolute;
     background-color: rgba(211, 211, 211, 0.486);
     padding: 12px 10px;
     outline: none;
-    
+    margin-left: 20px;
 }
 
 .currency input{
+    font-family: sans-serif;
+    max-width: 5rem;
+    padding: .5rem;
+    border: solid #ddd;
+    border-width: 0 0 2px;
     text-align: right;
-    background: transparent;
-    font-size: 17px;
-    border: 0;
+    margin-left: 50px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .swap-rate-container{
@@ -226,8 +206,10 @@ position: absolute;
 .rate{
     font-size: 17px;
     padding: 6px;
+    margin-left: 12px;
 }
 select:focus, input:focus, button:focus{
     outline: 0;
 }
+
 
