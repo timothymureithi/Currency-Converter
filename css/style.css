@@ -26,18 +26,23 @@
 }
 
 .content{
+    width: 75%;
+    padding-top: 15px;
+    padding-bottom: 20px;
     position: absolute;
     top: 50%;
-    max-width: 500px;
-    left: 120px;
-    transform: translateY(-50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgb(243, 238, 238);
+    border-radius: 15px;
 }
 
 .content h3{
     color: #ff2e00;
-    font-size: 30px;
-    line-height: 70px;
+    font-size: 37px;
+    line-height: 30px;
     margin: 25px 0;
+    margin-left: 20px;
 }
 
 .content p{
@@ -129,9 +134,14 @@ hr{
         flex-basis: 100%;
     }
     .content{
-        left: 0;
-        padding: 20px;
-        text-align: center;
+        width: 75%;
+        padding-top: 80px;
+        padding-bottom: 30px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    
     }
     .content h1{
         font-size: 34px;
@@ -158,9 +168,26 @@ hr{
     cursor: pointer;
     font-size: 14px;
     background-color: #0043ee;
-    border-radius: 5px;
-    padding: 10px 120px;
+    border-radius: 50px;
+    margin-left: 3em;
+    padding: 10px 40px;
 }
+
+/*
+
+position: absolute;
+    width: 260px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 40px;
+    margin-top: 28px;
+    border-radius: 50px;
+    background-color: rgb(0, 162, 255);
+    color: white;
+    font-weight: 300;
+
+
+*/
 
 .currency{
     display: flex;
@@ -174,15 +201,12 @@ hr{
 
 
 .currency select {
-    padding: 10px 20px 10px 10px;
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    appearance: none;
-    border: 1 px solid #cdcccc;
-    background: transparent;
-    background-repeat: no-repeat;
-    background-size: 12px auto, 100%;
-    background-position: right 10px top 50%, 0, 0;
+    width: auto;
+    border: 1px solid rgba(128, 128, 128, 0.096);
+    font-size: 16px;
+    background-color: rgba(211, 211, 211, 0.486);
+    padding: 12px 10px;
+    outline: none;
     
 }
 
@@ -206,3 +230,4 @@ hr{
 select:focus, input:focus, button:focus{
     outline: 0;
 }
+
