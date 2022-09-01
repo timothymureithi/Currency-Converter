@@ -20,7 +20,7 @@
 
 .logo{
     display: block;
-    width: 80px;
+    width: 100px;
     margin-top: 30px;
     margin-left: 100px;
 }
@@ -33,9 +33,9 @@
     transform: translateY(-50%);
 }
 
-.content h1{
+.content h3{
     color: #ff2e00;
-    font-size: 60px;
+    font-size: 30px;
     line-height: 70px;
     margin: 25px 0;
 }
@@ -121,7 +121,7 @@ hr{
 }
 
 /* Adding media queries for responsive UI across all devices */
-@media only screen and (max-width: 800px){
+@media only screen and (max-width: 600px){
     .logo{
         margin: 30px auto;
     }
@@ -144,4 +144,65 @@ hr{
     .slider-content{
         height: auto;
     }
+    .currency input{
+        width: 200px
+    }
+}
+
+/*--Currency COnverter--*/
+.container{
+    display: block;
+}
+.swapBtn{
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    background-color: #0043ee;
+    border-radius: 5px;
+    padding: 10px 120px;
+}
+
+.currency{
+    display: flex;
+    padding: 1re;
+    align-items: center;
+    justify-content: space-between;
+    width: 10rem;
+    padding: 6px;
+}
+
+
+
+.currency select {
+    padding: 10px 20px 10px 10px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    border: 1 px solid #cdcccc;
+    background: transparent;
+    background-repeat: no-repeat;
+    background-size: 12px auto, 100%;
+    background-position: right 10px top 50%, 0, 0;
+    
+}
+
+.currency input{
+    text-align: right;
+    background: transparent;
+    font-size: 17px;
+    border: 0;
+}
+
+.swap-rate-container{
+    display: block;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.rate{
+    font-size: 17px;
+    padding: 6px;
+}
+select:focus, input:focus, button:focus{
+    outline: 0;
 }
