@@ -1,9 +1,10 @@
-//functionality for back and next button
+//functionality for back and next button in the image slider
 
 const slidebtn = document.getElementById("slide");
 const backbtn = document.getElementById("backBtn");
 const nextbtn = document.getElementById("nextBtn");
 
+//Array that will grab the list of images to place in the gallery
 const sliderImg = new Array(
     "images/img1.jpg",
     "images/img2.jpg",
@@ -12,8 +13,10 @@ const sliderImg = new Array(
 
 );
 
+//Array images order 0-1, therefore i = 0
 let i = 0;
 
+//function for next button. Starts from 0 the increments by 1 (i++)
 nextbtn.onclick = function() {
    if (i < 3){
     slide.src = sliderImg[i+1];
@@ -23,6 +26,7 @@ nextbtn.onclick = function() {
    } 
 }
 
+//function for back button. Inverse of the next button i--
 backbtn.onclick = function() {
     if (i > 0){
      slide.src = sliderImg[i+1];
@@ -48,7 +52,7 @@ backbtn.onclick = function() {
  amount1.addEventListener('input', calculate );
  amount2.addEventListener('input', calculate)
 
- //fetch currency rates
+ //fetch currency rates from exchangerate-api
  function calculate(){
     const currency_1 = currency1.value;
     const currency_2 = currency2.value; 
@@ -58,12 +62,13 @@ backbtn.onclick = function() {
     .then((data) => {
         //  console.log(data);
         const rate = data.conversion_rates[currency_2];
-        Convrate.innerText = `0 ${currency_1} = ${rate} ${currency_2}`;
+        Convrate.innerText = `1 ${currency_1} = ${rate} ${currency_2}`;
         amount2.value = (amount1.value * rate).toFixed(2);
 
     });
  }
 
+ //An event listener button that will allow the functionality of swapping currencies. Eg. GBP to USD --> USD to GBP
  swap.addEventListener('click', () => {
     const tempVar = currency1.value;
     currency1.value = currency2.value;
